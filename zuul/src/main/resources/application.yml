@@ -1,0 +1,12 @@
+server:
+  port: 8000
+spring:
+  application:
+    name: zuul
+zuul:
+  ignoredServices: '*'
+  prefix: /api
+  routes:
+    user-management:
+      path: /user-management/**
+      serviceId: user-management
